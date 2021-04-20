@@ -2,7 +2,7 @@
 
 Providing meaningful test coverage
 
-- Demonstrate how to use the code as intended by testing the [happy paths](https://en.wikipedia.org/wiki/Happy_path). Prepare for the unintended by testing intended behaviour for unhappy paths. 
+- Demonstrate how to use the code as intended by testing the [happy paths](https://en.wikipedia.org/wiki/Happy_path). Prepare for the unintended by testing defined behaviour for unhappy paths. 
 - When reviewing changes, check for test coverage. If it’s unclear what’s tested and what’s not, maybe the tests could do with being more readable.
 - Automated test coverage checks are only useful when they fail. When they pass, they are counterproductive because they encourage complacency. For example, they don't measure whether the tests make meaningful assertions. For this reason, I don't recommend them. 
 - We want to keep test coverage meaningful. For example:
