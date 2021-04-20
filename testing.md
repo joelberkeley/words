@@ -17,18 +17,7 @@ Providing meaningful test coverage
 
 - Write tests alongside the source code. This prevents errors in understanding, keeping a tight loop between development and testing. This also helps to ensure code is designed with the user in mind.
 - Keep tests simple. Tests are about confidence, and it's difficult to be confident about complex code. If a test defers part of its work to another source (e.g. another library or utility function), also test that source.
-- When testing non-deterministic objects, take care not to rely on determinism where it can’t be found. For example the following test doesn't pass because the set in the first line doesn't guarantee an ordering.
-```python
-integers_in_a_set = {3, 1, 2, 5, 6}
-squares_in_a_list = [x ** 2 for x in integers_in_a_set]
-assert squares_in_a_list == [9, 1, 4, 25, 36]
-```
-
-One solution is to compare their sorted order
-```python
-assert sorted(squares_in_a_list) == sorted([9, 1, 4, 25, 36])
-```
-- Add type hints to test utilities, fixtures and stubs, integration tests and unit tests.
+- When testing non-deterministic objects, take care not to rely on determinism where it can’t be found.
 
 ### Make the most of tools
 
