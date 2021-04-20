@@ -6,7 +6,7 @@ An exploration of languages of particular interest.
 
 ### [Idris](https://www.idris-lang.org/)
 
-Idris is a purely functional language with dependent types and theorem proving. Unlike Agda, it is [designed for](http://docs.idris-lang.org/en/latest/faq/faq.html#what-are-the-differences-between-agda-and-idris) general purpose programming. It is inspired by Haskell, and uses much of the same syntax, but is written in C. As of early 2020, Idris isn't ready for production deployment.
+Idris is a purely functional language with dependent types and theorem proving. It shares these attributes with Agda, but is [designed for](http://docs.idris-lang.org/en/latest/faq/faq.html#what-are-the-differences-between-agda-and-idris) general purpose programming. It is inspired by Haskell, and uses much of the same syntax, but is written in C. As of 2021, Idris isn't ready for production deployment.
 
 ### [Rust](https://www.rust-lang.org/)
 
@@ -24,6 +24,4 @@ A common feeling among developers I've spoken to is that Scala has too many feat
 
 ### [Python](https://www.python.org/)
 
-### [Swift](https://www.apple.com/uk/swift/)
-
-I work in machine learning (ML), and Google are working on extending the Swift language with first-class automatic differentiation for a more principled approach to language support for ML in [_Swift for TensorFlow_](https://www.tensorflow.org/swift). I'm including it here because I will inevitably start exploring it in more depth.
+Python is the bread and butter of machine learning research, which is why I use it frequently. I think of Python a bit like Lego: it's straightforward, very flexible, and doesn't ask much of you, but when you need to build something that will hold strong, unattended, under heavy usage, it's just not the right tool for the job.
