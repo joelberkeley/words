@@ -1,14 +1,26 @@
 # testing
 
+### important qualities of tests
+
+#### readable
+
+#### reproducible
+
+#### accurate
+
+#### maintainable
+
+#### comprehensive
+
 Providing meaningful test coverage
 
-- Demonstrate how to use the code as intended by testing the [happy paths](https://en.wikipedia.org/wiki/Happy_path). Prepare for the unintended by testing defined behaviour for unhappy paths. 
-- When reviewing changes, check for test coverage. If it’s unclear what’s tested and what’s not, maybe the tests could do with being more readable.
-- Automated test coverage checks are only useful when they fail. When they pass, they are counterproductive because they encourage complacency. For example, they don't measure whether the tests make meaningful assertions. For this reason, I don't recommend them. 
+- Don't stop at testing the [happy paths](https://en.wikipedia.org/wiki/Happy_path). They only constitute part of the API. Also test behaviour for unhappy paths. 
+- When reviewing changes, check for test coverage. If it’s unclear what’s tested and what’s not, consider making the tests more readable.
+- Automated test coverage checks can tell you when your tests are lacking, but they can't tell you when they're complete. For example, they don't measure whether the tests make meaningful assertions. Since they tend to instill overconfidence, I don't recommend them.
 - We want to keep test coverage meaningful. For example:
   - Avoid duplicate tests, which create unnecessary maintenance overhead, make running tests slower, and can indicate an inconsistent approach to coverage.
-  - Ensure tests are named in a meaningfully and accurately. This makes it easier for others to find relevant tests rather than creating duplicates.
-  _ Add comments to parameterised test cases, ensuring the comments can’t drift, such that others can see which sets of parameters have already been tested.
+  - Ensure tests are named in meaningfully and accurately. This makes it easier for others to find relevant tests rather than creating duplicates.
+  - Add comments to parameterised test cases, ensuring the comments can’t drift. This helps others see which sets of parameters have already been tested.
   - Ensure test setup is correct, as if incorrect it can lead to tests that do not check the behaviour you expect.
   - Test a range of potential inputs, including edge cases and invalid values.
   - Tests that fail intermittently don’t convey meaningful information and as such they reduce developer confidence in the value of tests and the build system. If they are unfixable, it is better to delete them than have them intermittently failing.
@@ -16,7 +28,7 @@ Providing meaningful test coverage
 ### Avoiding bugs in tests
 
 - Write tests alongside the source code. This prevents errors in understanding, keeping a tight loop between development and testing. This also helps to ensure code is designed with the user in mind.
-- Keep tests simple. Tests are about confidence, and it's difficult to be confident about complex code. If a test defers part of its work to another source (e.g. another library or utility function), also test that source.
+- Keep tests simple. Tests are about confidence, and it's difficult to be confident about complex code. If a test defers part of its work to another source, such as another library or utility function, also test that source.
 - When testing non-deterministic objects, take care not to rely on determinism where it can’t be found.
 
 ### Make the most of tools
@@ -40,12 +52,11 @@ For example, don't use private members of modules and classes, and don't patch o
 
 Make tests fast
 
-A user should be able to comfortably run all of the tests. If a test is slow, try to speed it up.
+A user should be able to comfortably run all the tests. If a test is slow, try to speed it up.
 
 Make tests independent
 
 Tests that depend on other tests are hard to reason about, maintain, and diagnose on failure. For this reason, a test should never depend in any way on another test. Consequently,
-
 - don’t rely on the order in which tests are run
 - clean up resources and state (global configuration) after a test is complete
 
@@ -57,7 +68,8 @@ When your test framework relies on exceptions for assertions, you can only see a
 
 Glossary
 
-- mock (also stub, dummy, double, fake) n. A mock of an object has the same interface as the original object (or a subset thereof), but the logic in the original is replaced in the mock with the minimal logic required for the test to work. - patch v. for an object defined in a given scope, replace any usage of that object within that scope with another object. For example, if I am testing a function which makes a value of type `Foo`, I can patch `Foo` for that function’s enclosing module and test how the function makes use of `Foo`.
+- mock (also stub, dummy, double, fake) _n_. A mock of an object has the same interface as the original object (or a subset thereof), but the logic in the original is replaced in the mock with the minimal logic required for the test to work. 
+- patch _v_. for an object defined in a given scope, replace any usage of that object within that scope with another object. For example, if I am testing a function which makes a value of type `Foo`, I can patch `Foo` for that function’s enclosing module and test how the function makes use of `Foo`.
 
 Appendix A: Mission statement
 
