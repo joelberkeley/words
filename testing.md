@@ -1,5 +1,7 @@
 # testing
 
+todo a new approach - explain why these important qualities are important, then tag all the recommendations with the relevant qualities
+
 ### important qualities of tests
 
 #### readable
