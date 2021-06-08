@@ -16,15 +16,15 @@ todo a new approach - explain why these important qualities are important, then 
 
 Providing meaningful test coverage
 
-- Don't stop at testing the [happy paths](https://en.wikipedia.org/wiki/Happy_path). They only constitute part of the API. Also test behaviour for unhappy paths. 
-- When reviewing changes, check for test coverage. If it’s unclear what’s tested and what’s not, consider making the tests more readable.
-- Automated test coverage checks can tell you when your tests are lacking, but they can't tell you when they're complete. For example, they don't measure whether the tests make meaningful assertions. Since they tend to instill overconfidence, I don't recommend them.
+- Don't stop at testing the [happy paths](https://en.wikipedia.org/wiki/Happy_path). They only constitute part of the API. Also test behaviour for unhappy paths. [#comprehensive](#comprehensive)
+- When reviewing changes, check for test coverage. If it’s unclear what’s tested and what’s not, consider making the tests more readable. [#comprehensive](#comprehensive) [#readable](#readable)
+- Automated test coverage checks can tell you when your tests are lacking, but they can't tell you when they're complete. For example, they don't measure whether the tests make meaningful assertions. Since they tend to instill overconfidence, I don't recommend them. [#comprehensive](#comprehensive)
 - We want to keep test coverage meaningful. For example:
-  - Avoid duplicate tests, which create unnecessary maintenance overhead, make running tests slower, and can indicate an inconsistent approach to coverage.
-  - Ensure tests are named in meaningfully and accurately. This makes it easier for others to find relevant tests rather than creating duplicates.
-  - Add comments to parameterised test cases, ensuring the comments can’t drift. This helps others see which sets of parameters have already been tested.
-  - Ensure test setup is correct, as if incorrect it can lead to tests that do not check the behaviour you expect.
-  - Test a range of potential inputs, including edge cases and invalid values.
+  - Avoid duplicate tests, which create unnecessary maintenance overhead, make running tests slower, and can indicate an inconsistent approach to coverage. [#maintainable](#maintainable)
+  - Ensure tests are named meaningfully and accurately. This makes it easier for others to find relevant tests rather than creating duplicates. [#maintainable](#maintainable)
+  - Add comments to parameterised test cases, ensuring the comments can’t drift. This helps others see which sets of parameters have already been tested. [#readable](#readable) [#maintainable](#maintainable)
+  - Ensure test setup is correct, as if incorrect it can lead to tests that do not check the behaviour you expect. [#accurate](#accurate)
+  - Test a range of potential inputs, including edge cases and invalid values. [#comprehensive](#comprehensive)
   - Tests that fail intermittently don’t convey meaningful information and as such they reduce developer confidence in the value of tests and the build system. If they are unfixable, it is better to delete them than have them intermittently failing.
 
 ### Avoiding bugs in tests
@@ -70,7 +70,7 @@ When your test framework relies on exceptions for assertions, you can only see a
 
 Glossary
 
-- mock (also stub, dummy, double, fake) _n_. A mock of an object has the same interface as the original object (or a subset thereof), but the logic in the original is replaced in the mock with the minimal logic required for the test to work. 
+- mock (also stub, dummy, double, fake) _n_. A mock of an object has the same interface as the original object (or a subset thereof), but the logic in the original is replaced in the mock with the minimal logic required for the test to work.
 - patch _v_. for an object defined in a given scope, replace any usage of that object within that scope with another object. For example, if I am testing a function which makes a value of type `Foo`, I can patch `Foo` for that function’s enclosing module and test how the function makes use of `Foo`.
 
 Appendix A: Mission statement
