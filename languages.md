@@ -6,11 +6,20 @@ An exploration of languages of particular interest.
 
 ### [Idris](https://www.idris-lang.org/)
 
-Idris is a purely functional language with dependent types and theorem proving. It shares these attributes with Agda, but is [designed for](http://docs.idris-lang.org/en/latest/faq/faq.html#what-are-the-differences-between-agda-and-idris) general purpose programming. It is inspired by Haskell, and uses much of the same syntax, but is written in C. As of 2021, Idris isn't ready for production deployment.
+Idris is a purely functional language with:
+
+ * dependent types, where types can depend on values, such as encoding the length of a list in its
+   type
+ * quantitative types, where you can specify how many of a value exist at runtime. This can be used
+   to erase values at runtime, or ensure only one reference exists to a unique physical entity
+ * theorem proving, which allows one to guarantee certain properties of runtime values at compile
+   time, such as an integer being within some bounds
+
+Idris shares dependent types and theorem proving with Agda, but is [designed for](http://docs.idris-lang.org/en/latest/faq/faq.html#what-are-the-differences-between-agda-and-idris) general purpose programming. It is inspired by Haskell, and uses much of the same syntax, but is written in C. As of 2021, Idris isn't ready for production deployment.
 
 ### [Rust](https://www.rust-lang.org/)
 
-Rust gives the performance and memory profile of C, while guaranteeing memory and thread safety. It achieves this with an ownership memory model and its type system. It is often spoken of as having a steep learning curve, but I don't think this opinion is always justified. It simply enforces the rules you _should_ learn in languages like C, but often don't. Moreover, there are a number of ways of explicitly trading performance or safety for syntactic and conceptual simplicity.
+Rust gives the performance and memory profile of C, while guaranteeing memory and thread safety. It achieves this with an ownership memory model and its type system. It is often spoken of as having a steep learning curve, but I don't think this opinion is always justified. It simply enforces the rules you _should_ learn in languages like C, but might not. Moreover, there are a number of ways of explicitly trading performance or safety for syntactic and conceptual simplicity.
 
 Beyond the features of the language itself, Rust boasts an intuitive and reliable package manager, Cargo, as well as some of the [best learning resources](https://www.rust-lang.org/learn) around, such as [_the book_](https://doc.rust-lang.org/book/). I personally learnt Rust using a different book, [_Programming Rust_](http://shop.oreilly.com/product/0636920040385.do) by Blandy and Orendorff, which I consider the best programming book I've read.
 
@@ -24,4 +33,4 @@ A common feeling among developers I've spoken to is that Scala has too many feat
 
 ### [Python](https://www.python.org/)
 
-Python is the bread and butter of machine learning research, which is why I use it frequently. Python is great for prototyping and small projects: it's straightforward, flexible, and doesn't ask much of you, but when you need to build something that will make good use of hardware resources, or hold strong, unattended, under heavy usage, it's just not the right tool for the job.
+Python is the bread and butter of machine learning research, which is why I use it frequently. Python is great for prototyping and small projects: it's straightforward, flexible, and doesn't ask much of you, but when you need to build something that will make good use of hardware resources, or hold strong, unattended, under heavy usage, it's quite possibly not the right tool for the job.
