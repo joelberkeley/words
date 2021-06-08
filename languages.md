@@ -8,7 +8,8 @@ An exploration of languages of particular interest.
 
 Idris is a purely functional language with:
 
- * dependent types, where values and types are treated equally, and types can depend on values
+ * dependent types, where types can depend on values, such as encoding the length of a list in its
+   type
  * quantitative types, where you can specify how many of a value exist at runtime. This can be used
    to erase values at runtime, or ensure only one reference exists to a unique physical entity
  * theorem proving, which allows one to guarantee certain properties of runtime values at compile
