@@ -12,6 +12,10 @@ _How to set up interactive editing in Neovim for Idris 2 on Ubuntu_
    ```bash
    pack install-app lsp
    ```
+   You can check the LSP is working with
+   ```bash
+   idris2-lsp --version
+   ```
 1. Add LSP to your Neovim config at ~/.config/nvim/init.lua. A minimal config may look like
    ```lua
    require('packer').startup(function()
