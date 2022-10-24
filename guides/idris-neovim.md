@@ -2,13 +2,13 @@
 
 _How to set up interactive editing in Neovim for Idris 2 on Ubuntu_
 
-1. Install Neovim. I strongly recommend using the [latest stable release](https://github.com/neovim/neovim/releases/latest). The version on your distro's official package repository may well be too old.
+1. Install Neovim. I recommend using the [latest stable release](https://github.com/neovim/neovim/releases/latest). The version on your distro's official package repository may well be too old.
 1. Install [Packer](https://github.com/wbthomason/packer.nvim) with e.g.
    ```bash
    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
    ```
-1. Install the [Idris _Language Server Protocol_ (LSP)](https://github.com/idris-community/idris2-lsp). I recommend using pack. With pack, use
+1. Install the [Idris _Language Server Protocol_ (LSP)](https://github.com/idris-community/idris2-lsp). I recommend using pack. With pack installed, run
    ```bash
    pack install-app lsp
    ```
@@ -24,6 +24,10 @@ _How to set up interactive editing in Neovim for Idris 2 on Ubuntu_
 1. Add a [.ipkg file](https://idris2.readthedocs.io/en/latest/reference/packages.html) to your project. You can create a new package file in the current directory with
    ```bash
    idris2 --init
+   ```
+   Make sure your project builds. If your package file is foo.ipkg, run
+   ```bash
+   idris2 --build foo.ipkg
    ```
 1. (Optional) Add keyboard shortcuts for Idris2 commands. Add the following to your Neovim config
    ```lua
