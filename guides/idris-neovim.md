@@ -1,4 +1,4 @@
-# Setting up Idris interactive editing with Neovim
+# How to set up interactive editing for Idris with Neovim
 
 _How to set up interactive editing in Neovim for Idris 2 on Ubuntu_
 
