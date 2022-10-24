@@ -2,8 +2,6 @@
 
 _How to set up interactive editing in Neovim for Idris 2 on Ubuntu_
 
-Note: I use the words Idris and Idris2 interchangeably. I'll always mean Idris2.
-
 1. Install Neovim. I strongly recommend using the [latest stable release](https://github.com/neovim/neovim/releases/latest). The version on your distro's official package repository may well be too old.
 1. Install [Packer](https://github.com/wbthomason/packer.nvim) with e.g.
    ```bash
@@ -41,7 +39,7 @@ Note: I use the words Idris and Idris2 interchangeably. I'll always mean Idris2.
    vim.api.nvim_set_keymap('n', '<leader>rh', ":lua require('idris2.code_action').refine_hole()<CR>", {noremap = true})
    vim.api.nvim_set_keymap('n', '<leader>i' , ":lua require('idris2.code_action').intro()<CR>", {noremap = true})
    ```
-   You may want to add other commands listed in the [plugin docs](https://github.com/ShinKage/idris2-nvim).
+   You may want to add other commands listed in the [plugin docs](https://github.com/ShinKage/idris2-nvim). With a default nvim setup, `<leader>` is backslash, so entering `\ac` while on a function type signature will add a template definition.
 1. (Optional) Autosave on each editing action. To do this, replace the line `require('idris2').setup({})` shown above with
    ```lua
    local function save_hook(action)
