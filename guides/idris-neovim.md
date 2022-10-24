@@ -53,7 +53,7 @@ _How to set up interactive editing in Neovim for Idris 2 on Ubuntu_
    require('idris2').setup({code_action_post_hook = save_hook})
    ```
 
-## It's not working
+## Something's not working
 
 * **Problem:** Editing command doesn't work, and the command bar shows
   ```
