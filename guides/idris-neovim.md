@@ -52,3 +52,12 @@ _How to set up interactive editing in Neovim for Idris 2 on Ubuntu_
 
    require('idris2').setup({code_action_post_hook = save_hook})
    ```
+
+## It's not working
+
+* **Problem:** Using an editing command does nothing, and the command bar shows
+  ```
+  No code actions available
+  ```
+  **Possible solutions:**
+  * The LSP only works if the code in the current module, and the modules it imports, compiles. Note, compiler errors don't always appear on the line you are focussed on, they can appear at the top of the module for example. Try building the package from the command line. Fix compiler errors in the current module and those it imports.
