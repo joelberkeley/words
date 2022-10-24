@@ -23,7 +23,6 @@ Note: I use the words Idris and Idris2 interchangeably. I'll always mean Idris2.
 
    require('idris2').setup({})
    ```
-   It can of course contain other things too e.g. if you have other Neovim plugins installed.
 1. Add a [.ipkg file](https://idris2.readthedocs.io/en/latest/reference/packages.html) to your project. You can create a new package file in the current directory with
    ```bash
    idris2 --init
