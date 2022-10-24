@@ -60,4 +60,4 @@ _How to set up interactive editing in Neovim for Idris 2 on Ubuntu_
   No code actions available
   ```
   **Solution:**
-  * The LSP only works if the code in the current module, and the modules it imports, compiles. Note, compiler errors don't always appear on the line you are focussed on, they can appear at the top of the module for example. Try building the package from the command line. Fix compiler errors in the current module and those it imports.
+  * The LSP only works if the code in the current module, and the modules it imports, compiles. Note, compiler errors don't always appear on the line you are focussed on, they can appear at the top of the module, for example. Try building the package from the command line. Fix compiler errors in the current module and those it imports.
