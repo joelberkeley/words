@@ -8,7 +8,7 @@ _How to set up interactive editing in Neovim for Idris 2 on Ubuntu_
    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
    ```
-1. Install the [Idris _Language Server Protocol_ (LSP)](https://github.com/idris-community/idris2-lsp). I recommend using pack. With pack installed, run
+1. Install the [Idris _Language Server Protocol_ (LSP)](https://github.com/idris-community/idris2-lsp). I recommend using [Pack](https://github.com/stefan-hoeck/idris2-pack). With Pack installed, run
    ```bash
    pack install-app lsp
    ```
