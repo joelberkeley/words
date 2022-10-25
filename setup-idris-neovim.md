@@ -49,7 +49,7 @@ This guide assumes Ubuntu, but may work on other Linux distributions and Mac OS.
    vim.api.nvim_set_keymap('n', '<leader>i' , ':lua require("idris2.code_action").intro()<CR>', {noremap = true})
    ```
    You may want to add other commands listed in the [plugin docs](https://github.com/ShinKage/idris2-nvim). With a default nvim setup, `<leader>` is backslash, so entering `\ac` with the cursor on a function type signature will add a template definition.
-1. (Optional) Autosave on each editing action. To do this, replace the line `require('idris2').setup({})` shown above with
+1. (Optional) Autosave on each editing action. To do this, add a callback to `require('idris2').setup({})` as
    ```lua
    local function save_hook(action)
      vim.cmd('silent write')
