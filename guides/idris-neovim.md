@@ -8,7 +8,7 @@ _This guide assumes Ubuntu, but may well work on other Linux distributions and M
    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
    ```
-1. Install the [Idris _Language Server Protocol_ (LSP)](https://github.com/idris-community/idris2-lsp). I recommend using [Pack](https://github.com/stefan-hoeck/idris2-pack). With Pack installed (and ~/.pack/bin added to PATH), run
+1. Install the [Idris _Language Server Protocol_ (LSP)](https://github.com/idris-community/idris2-lsp). I recommend using [Pack](https://github.com/stefan-hoeck/idris2-pack). With Pack installed (and ~/.pack/bin added to `PATH`), run
    ```bash
    pack install-app lsp
    ```
