@@ -66,4 +66,6 @@ This guide assumes Ubuntu, but may work on other Linux distributions and Mac OS.
   No code actions available
   ```
   **Solution**
-  The LSP only works if the code in the current module, and the modules it imports, compiles. Note compiler errors don't always appear in the editor at the same place as the error: they can appear at the top of the module, for example. Try building the package from the command line. Fix compiler errors in the current module and those it imports.
+  Fix all compiler errors in the code and its dependencies. If you cannot find the errors, build the project from the command line.
+  **Explanation**
+  The LSP only works if the code in the current module, and the modules it imports, compiles. Meanwhile, compiler errors don't always appear in the editor at the same place as the error: they can appear at the top of the module, for example.
