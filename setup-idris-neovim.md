@@ -1,4 +1,4 @@
-# How to set up interactive editing for Idris with Neovim
+# Setting up interactive editing for Idris with Neovim
 
 This guide assumes Ubuntu, but may work on other Linux distributions and Mac OS.
 
