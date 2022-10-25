@@ -12,8 +12,7 @@ Idris is a purely functional language with:
    type
  * quantitative types, where you can specify how many of a value exist at runtime. This can be used
    to erase values at runtime, or ensure only one reference exists to a unique physical entity
- * theorem proving, which allows one to guarantee certain properties of runtime values at compile
-   time, such as an integer being within some bounds
+ * theorem proving, which allows one to guarantee certain properties of functionality, such as the reverse of a list is its own inverse
 
 Idris shares dependent types and theorem proving with Agda, but is [designed for](http://docs.idris-lang.org/en/latest/faq/faq.html#what-are-the-differences-between-agda-and-idris) general purpose programming. It is inspired by Haskell, and uses much of the same syntax. As of 2022, Idris isn't ready for production deployment.
 
