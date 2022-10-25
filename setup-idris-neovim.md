@@ -11,7 +11,7 @@ This guide assumes Ubuntu, but may work on other Linux distributions and Mac OS.
    ```bash
    idris2-lsp --version
    ```
-1. We use [Packer](https://github.com/wbthomason/packer.nvim) (not to be confused with Pack) to install the LSP plugin. Packer can be installed with
+1. We use [Packer](https://github.com/wbthomason/packer.nvim) (not to be confused with Pack) to install the Neovim LSP plugin. Packer can be installed with
    ```bash
    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
