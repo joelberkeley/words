@@ -1,6 +1,6 @@
 # How to set up interactive editing for Idris with Neovim
 
-_This guide assumes Ubuntu, but may well work on other Linux distributions and Mac OS_
+This guide assumes Ubuntu, but may work on other Linux distributions and Mac OS.
 
 1. Install Neovim. I recommend using the [latest stable release](https://github.com/neovim/neovim/releases/latest). The version on your distro's official package repository may well be too old.
 1. Install [Packer](https://github.com/wbthomason/packer.nvim) with e.g.
