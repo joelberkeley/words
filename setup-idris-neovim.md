@@ -25,8 +25,8 @@ This guide assumes Ubuntu, but may work on other Linux distributions and Mac OS.
 
    require('idris2').setup({})
    ```
-1. Install configured plugins, by running `:PackerSync` in Neovim.
-1. Add a [.ipkg file](https://idris2.readthedocs.io/en/latest/reference/packages.html) to your project. You can create a new package file in the current directory with
+1. Install configured plugins by running `:PackerSync` in Neovim.
+1. Add a [package file](https://idris2.readthedocs.io/en/latest/reference/packages.html) to your project. You can create a new package file in the current directory with
    ```bash
    idris2 --init
    ```
@@ -48,7 +48,7 @@ This guide assumes Ubuntu, but may work on other Linux distributions and Mac OS.
    vim.api.nvim_set_keymap('n', '<leader>rh', ':lua require("idris2.code_action").refine_hole()<CR>', {noremap = true})
    vim.api.nvim_set_keymap('n', '<leader>i' , ':lua require("idris2.code_action").intro()<CR>', {noremap = true})
    ```
-   You may want to add other commands listed in the [plugin docs](https://github.com/ShinKage/idris2-nvim). With a default nvim setup, `<leader>` is backslash, so entering `\ac` while on a function type signature will add a template definition.
+   You may want to add other commands listed in the [plugin docs](https://github.com/ShinKage/idris2-nvim). With a default nvim setup, `<leader>` is backslash, so entering `\ac` with the cursor on a function type signature will add a template definition.
 1. (Optional) Autosave on each editing action. To do this, replace the line `require('idris2').setup({})` shown above with
    ```lua
    local function save_hook(action)
