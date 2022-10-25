@@ -15,7 +15,7 @@ Idris is a purely functional language with:
  * theorem proving, which allows one to guarantee certain properties of runtime values at compile
    time, such as an integer being within some bounds
 
-Idris shares dependent types and theorem proving with Agda, but is [designed for](http://docs.idris-lang.org/en/latest/faq/faq.html#what-are-the-differences-between-agda-and-idris) general purpose programming. It is inspired by Haskell, and uses much of the same syntax, but is written in C. As of 2021, Idris isn't ready for production deployment.
+Idris shares dependent types and theorem proving with Agda, but is [designed for](http://docs.idris-lang.org/en/latest/faq/faq.html#what-are-the-differences-between-agda-and-idris) general purpose programming. It is inspired by Haskell, and uses much of the same syntax. As of 2021, Idris isn't ready for production deployment.
 
 One difficulty I have noticed with Idris is that it can very difficult indeed to write performant, correct, purely functional, and provably total systems of a significant size. The effort required can reduce a developer's capacity to pay attention to quality, in much the same way that a complicated UI is a security hazard because users can be tempted to circumvent protocols.
 
