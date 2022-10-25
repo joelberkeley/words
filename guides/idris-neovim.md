@@ -8,7 +8,7 @@ _This guide assumes Ubuntu, but may well work on other Linux distributions and M
    git clone --depth 1 https://github.com/wbthomason/packer.nvim\
     ~/.local/share/nvim/site/pack/packer/start/packer.nvim
    ```
-1. Install the [Idris _Language Server Protocol_ (LSP)](https://github.com/idris-community/idris2-lsp). I recommend using [Pack](https://github.com/stefan-hoeck/idris2-pack). With Pack installed, run
+1. Install the [Idris _Language Server Protocol_ (LSP)](https://github.com/idris-community/idris2-lsp). I recommend using [Pack](https://github.com/stefan-hoeck/idris2-pack). With Pack installed (and ~/.pack/bin added to PATH), run
    ```bash
    pack install-app lsp
    ```
@@ -25,6 +25,7 @@ _This guide assumes Ubuntu, but may well work on other Linux distributions and M
 
    require('idris2').setup({})
    ```
+1. Install configured plugins, by running `:PackerSync` in Neovim.
 1. Add a [.ipkg file](https://idris2.readthedocs.io/en/latest/reference/packages.html) to your project. You can create a new package file in the current directory with
    ```bash
    idris2 --init
@@ -59,9 +60,10 @@ _This guide assumes Ubuntu, but may well work on other Linux distributions and M
 
 ## Something's not working
 
-* **Problem:** Editing command doesn't work, and the command bar shows
+* **Problem**
+  Editing command doesn't work, and the command bar shows
   ```
   No code actions available
   ```
-  **Solution:**
-  * The LSP only works if the code in the current module, and the modules it imports, compiles. Note compiler errors don't always appear in the editor at the same place as the error: they can appear at the top of the module, for example. Try building the package from the command line. Fix compiler errors in the current module and those it imports.
+  **Solution**
+  The LSP only works if the code in the current module, and the modules it imports, compiles. Note compiler errors don't always appear in the editor at the same place as the error: they can appear at the top of the module, for example. Try building the package from the command line. Fix compiler errors in the current module and those it imports.
