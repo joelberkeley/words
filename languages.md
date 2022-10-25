@@ -17,6 +17,8 @@ Idris is a purely functional language with:
 
 Idris shares dependent types and theorem proving with Agda, but is [designed for](http://docs.idris-lang.org/en/latest/faq/faq.html#what-are-the-differences-between-agda-and-idris) general purpose programming. It is inspired by Haskell, and uses much of the same syntax, but is written in C. As of 2021, Idris isn't ready for production deployment.
 
+One difficulty I have noticed with Idris is that it can very difficult indeed to write performant, correct, purely functional, and provably total systems of a significant size. The effort required can reduce a developer's capacity to pay attention to quality, in much the same way that a complicated UI is a security hazard because users can be tempted to circumvent protocols.
+
 ### [Rust](https://www.rust-lang.org/)
 
 Rust gives the performance and memory profile of C, while guaranteeing memory and thread safety. It achieves this with an ownership memory model and its type system. It is often spoken of as having a steep learning curve, but I don't think this opinion is always justified. It simply enforces the rules you _should_ learn in languages like C, but might not. Moreover, there are a number of ways of explicitly trading performance or safety for syntactic and conceptual simplicity.
