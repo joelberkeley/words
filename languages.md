@@ -16,7 +16,7 @@ Idris is a purely functional language with:
 
 Idris shares dependent types and theorem proving with Agda, but is [designed for](http://docs.idris-lang.org/en/latest/faq/faq.html#what-are-the-differences-between-agda-and-idris) general purpose programming. It is inspired by Haskell, and uses much of the same syntax. As of 2022, Idris isn't ready for production deployment.
 
-One difficulty I have noticed with Idris is that it can very difficult indeed to write performant, correct, purely functional, and provably total systems of a significant size. The effort required can reduce a developer's capacity to pay attention to quality, in much the same way that a complicated UI is a security hazard because users can be tempted to circumvent protocols.
+One difficulty I have noticed with Idris is that it can very difficult indeed to write performant, correct, purely functional, and provably total systems of any significant size. The effort required can reduce a developer's capacity to pay attention to quality, in much the same way that a complicated UI is a security hazard because users can be tempted to circumvent protocols.
 
 ### [Rust](https://www.rust-lang.org/)
 
