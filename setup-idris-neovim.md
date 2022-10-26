@@ -60,12 +60,10 @@ This guide assumes Ubuntu, but may work on other Linux distributions and Mac OS.
 
 ## Something's not working
 
-* **Problem**
-  Editing command doesn't work, and the command bar shows
+* **Problem** Editing command doesn't work, and the command bar shows
   ```
   No code actions available
   ```
-  **Solution**
-  Fix all compiler errors in the code and its dependencies. If you cannot find the errors using Neovim, build the project from the command line.  
-  **Explanation**
-  The LSP only works if the code in the current module, and the modules it imports, compiles. Meanwhile, compiler errors don't always appear in the editor at the same place as the error: they can appear at the top of the module, for example.
+  **Solution** Fix all compiler errors in the code and its dependencies. If you cannot find the errors using Neovim, build the project from the command line.
+
+  **Explanation** The LSP only works if the code in the current module, and the modules it imports, compiles. Meanwhile, compiler errors don't always appear in the editor at the same place as the error: they can appear at the top of the module, for example.
