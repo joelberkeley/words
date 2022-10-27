@@ -3,11 +3,6 @@
 This guide assumes Ubuntu, but may work on other Linux distributions and Mac OS.
 
 1. Install Neovim. I recommend using the [latest stable release](https://github.com/neovim/neovim/releases/latest). The version on your distro's official package repository may well be too old.
-1. Install [Packer](https://github.com/wbthomason/packer.nvim) with e.g.
-   ```bash
-   git clone --depth 1 https://github.com/wbthomason/packer.nvim\
-    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-   ```
 1. Install the [Idris _Language Server Protocol_ (LSP)](https://github.com/idris-community/idris2-lsp). I recommend using [Pack](https://github.com/stefan-hoeck/idris2-pack). With Pack installed (and ~/.pack/bin added to `PATH`), run
    ```bash
    pack install-app lsp
@@ -16,7 +11,12 @@ This guide assumes Ubuntu, but may work on other Linux distributions and Mac OS.
    ```bash
    idris2-lsp --version
    ```
-1. Add LSP to your Neovim config at ~/.config/nvim/init.lua. A minimal config may look like
+1. We use [Packer](https://github.com/wbthomason/packer.nvim) (not to be confused with Pack) to install the Neovim LSP plugin. Packer can be installed with
+   ```bash
+   git clone --depth 1 https://github.com/wbthomason/packer.nvim\
+    ~/.local/share/nvim/site/pack/packer/start/packer.nvim
+   ```
+1. Add the [LSP plugin](https://github.com/ShinKage/idris2-nvim) to your Neovim config at ~/.config/nvim/init.lua. A minimal config may look like
    ```lua
    require('packer').startup(function()
      use 'wbthomason/packer.nvim'
@@ -60,12 +60,10 @@ This guide assumes Ubuntu, but may work on other Linux distributions and Mac OS.
 
 ## Something's not working
 
-* **Problem**
-  Editing command doesn't work, and the command bar shows
+* **Problem** Editing command doesn't work, and the command bar shows
   ```
   No code actions available
   ```
-  **Solution**
-  Fix all compiler errors in the code and its dependencies. If you cannot find the errors, build the project from the command line.
-  **Explanation**
-  The LSP only works if the code in the current module, and the modules it imports, compiles. Meanwhile, compiler errors don't always appear in the editor at the same place as the error: they can appear at the top of the module, for example.
+  **Solution** Fix all compiler errors in the code and its dependencies. If you cannot find the errors using Neovim, build the project from the command line.
+
+  **Explanation** The LSP only works if the code in the current module, and the modules it imports, compiles. Meanwhile, compiler errors don't always appear in the editor at the same place as the error: they can appear at the top of the module, for example.
