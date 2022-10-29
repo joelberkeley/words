@@ -38,15 +38,15 @@ This guide assumes Ubuntu, but may work on other Linux distributions and Mac OS.
    ```lua
    vim.api.nvim_set_keymap('n', '<leader>h', ':lua vim.lsp.buf.hover()<CR>', {noremap = true})
 
-   vim.api.nvim_set_keymap('n', '<leader>e',  ':lua require("idris2.repl").evaluate()<CR>', {noremap = true})
-   vim.api.nvim_set_keymap('n', '<leader>cs', ':lua require("idris2.code_action").case_split()<CR>', {noremap = true})
-   vim.api.nvim_set_keymap('n', '<leader>mc', ':lua require("idris2.code_action").make_case()<CR>', {noremap = true})
-   vim.api.nvim_set_keymap('n', '<leader>ml', ':lua require("idris2.code_action").make_lemma()<CR>', {noremap = true})
-   vim.api.nvim_set_keymap('n', '<leader>ac', ':lua require("idris2.code_action").add_clause()<CR>', {noremap = true})
-   vim.api.nvim_set_keymap('n', '<leader>es', ':lua require("idris2.code_action").expr_search()<CR>', {noremap = true})
-   vim.api.nvim_set_keymap('n', '<leader>gd', ':lua require("idris2.code_action").generate_def()<CR>', {noremap = true})
-   vim.api.nvim_set_keymap('n', '<leader>rh', ':lua require("idris2.code_action").refine_hole()<CR>', {noremap = true})
-   vim.api.nvim_set_keymap('n', '<leader>i' , ':lua require("idris2.code_action").intro()<CR>', {noremap = true})
+   vim.keymap.set('n', '<leader>e' , ':lua require("idris2.repl").evaluate()<CR>'           , {noremap = true})
+   vim.keymap.set('n', '<leader>cs', ':lua require("idris2.code_action").case_split()<CR>'  , {noremap = true})
+   vim.keymap.set('n', '<leader>mc', ':lua require("idris2.code_action").make_case()<CR>'   , {noremap = true})
+   vim.keymap.set('n', '<leader>ml', ':lua require("idris2.code_action").make_lemma()<CR>'  , {noremap = true})
+   vim.keymap.set('n', '<leader>ac', ':lua require("idris2.code_action").add_clause()<CR>'  , {noremap = true})
+   vim.keymap.set('n', '<leader>es', ':lua require("idris2.code_action").expr_search()<CR>' , {noremap = true})
+   vim.keymap.set('n', '<leader>gd', ':lua require("idris2.code_action").generate_def()<CR>', {noremap = true})
+   vim.keymap.set('n', '<leader>rh', ':lua require("idris2.code_action").refine_hole()<CR>' , {noremap = true})
+   vim.keymap.set('n', '<leader>i' , ':lua require("idris2.code_action").intro()<CR>'       , {noremap = true})
    ```
    You may want to add other commands listed in the [plugin docs](https://github.com/ShinKage/idris2-nvim). With a default nvim setup, `<leader>` is backslash, so entering `\ac` with the cursor on a function type signature will add a template definition.
 1. (Optional) Autosave on each editing action. To do this, add a callback to `require('idris2').setup({})` as
