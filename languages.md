@@ -33,4 +33,4 @@ A common feeling among developers I've spoken to is that Scala has too many feat
 
 ### [Python](https://www.python.org/)
 
-Python is the bread and butter of machine learning research, which is why I use it frequently. Python is great for prototyping and small projects: it's straightforward, flexible, and doesn't ask much of you, but when you need to build something that will make good use of hardware resources, or hold strong, unattended, under heavy usage, it's quite possibly not the right tool for the job.
+Python is the bread and butter of machine learning research, which is why I use it frequently. Python is great for prototyping and small projects: it's straightforward, flexible, and doesn't ask much of you, but presents limitations when you need to build something that will make good use of hardware resources, or hold strong, unattended, under heavy usage.
